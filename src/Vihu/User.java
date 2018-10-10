@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 import static Vihu.UserConsoleReader.*;
 
-public class User{
+public class User {
     final long id;
     String username;
     String password;
@@ -13,33 +13,43 @@ public class User{
 
     private static final Scanner scanner = new Scanner(System.in);
 
-    User(long id, String username, String password) {
+    public User(long id, String username, String password) {
         this.id = id;
         this.username = username;
         this.password = password;
     }
 
     public void changeUser() {
-       String tempStr = changeInfo();
+        String tempStr = changeInfo();
         if (tempStr.equals("username")) {
-            username = scanner.next();
-        }
-
-        if (tempStr.equals("password")) {
-            password = scanner.next();
+            this.username = scanner.next();
         } else {
-            System.out.println("wrong info");
+            if (tempStr.equals("password")) {
+                this.password = scanner.next();
+            } else {
+                System.out.println("wrong info");
+            }
         }
     }
 
-    public void arrayAddNote(){
+    public long seeMyId() {
+        return id;
+    }
+
+    public void arrayAddNote() {
         notes.addNote();
     }
-    public void arrayDateSearch(){
+
+    public void arrayAddNote(String note, String feelings, LocalDateTime dateTime) {
+        notes.addNote(note, feelings, dateTime);
+    }
+
+    public void arrayDateSearch() {
         notes.findByDate(LocalDateTime.now());
     }
-    public void arrayLastFour(){
-        int count =4;
-        notes.lastFourNotes(count);
+
+    public String listLastNotes() {
+        int count = 4;
+        return notes.lastFourNotes(count);
     }
 }

@@ -19,7 +19,7 @@ class UserConsoleReader {
     }
 
     static String password() {
-        System.out.println("input username: ");
+        System.out.println("input password: ");
         return scanner.next();
     }
 

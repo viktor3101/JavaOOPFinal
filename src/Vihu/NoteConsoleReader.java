@@ -3,10 +3,10 @@ package Vihu;
 import java.time.LocalDateTime;
 import java.util.Scanner;
 
-class NoteConsoleReader {
+public class NoteConsoleReader {
     private static Scanner scanner = new Scanner(System.in);
 
-    static Note readNote() {
+    public static Note readNote() {
         System.out.println("input your note: ");
         String tempNote = scanner.nextLine();
         LocalDateTime tempDate = LocalDateTime.now();

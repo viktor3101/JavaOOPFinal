@@ -4,15 +4,19 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-import static Vihu.NoteConsoleReader.*;
-
-class NotesList {
+public class NotesList {
     private final List<Note> notes = new ArrayList<>();
-    void addNote() {
-        notes.add(readNote());
+
+    public void addNote() {
+        notes.add(NoteConsoleReader.readNote());
     }
 
-    String findByDate(LocalDateTime date) {
+    public void addNote(String note, String feelings, LocalDateTime dateTime) {
+
+        notes.add(new Note(note, dateTime, feelings));
+    }
+
+    public String findByDate(LocalDateTime date) {
         StringBuilder tempString = new StringBuilder("|" + date);
         int i = 1;
         for (Note note : notes) {
@@ -28,18 +32,18 @@ class NotesList {
         }
     }
 
-    String lastFourNotes(int notesCount) {
-        int temp = notes.size();
-        StringBuilder tempStr = new StringBuilder();
+    public String lastFourNotes(int notesCount) {
+        int temp = notes.size() - 1;
+        String tempStr = "Notes: \n";
         if (temp >= notesCount) {
             for (int i = temp; i > temp - notesCount; i--) {
-                tempStr.append(notes.get(i).toString()).append("\n");
+                tempStr += notes.get(i).toString() + "\n";
             }
         } else {
-            for (Note note : notes) {
-                tempStr.append(note.toString()).append("\n");
+            for (int i = temp;i>=0;i--) {
+                tempStr += notes.get(i).toString() + "\n";
             }
         }
-        return tempStr.toString();
+        return tempStr;
     }
 }
