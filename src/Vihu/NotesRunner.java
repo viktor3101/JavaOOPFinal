@@ -2,7 +2,6 @@ package Vihu;
 
 
 import java.time.LocalDateTime;
-import java.util.Scanner;
 
 public class NotesRunner {
     public static void main(String[] args) {
