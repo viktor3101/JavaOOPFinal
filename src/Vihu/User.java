@@ -1,13 +1,15 @@
 package Vihu;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Scanner;
+
+import static Vihu.UserConsoleReader.*;
 
 public class User{
     final long id;
     String username;
     String password;
-    private static NotesArray userNotes = new NotesArray();
+    private final NotesList notes = new NotesList();
 
     private static final Scanner scanner = new Scanner(System.in);
 
@@ -18,8 +20,7 @@ public class User{
     }
 
     public void changeUser() {
-        System.out.println("What will you wanna change?? (username/password)");
-        String tempStr = scanner.next();
+       String tempStr = changeInfo();
         if (tempStr.equals("username")) {
             username = scanner.next();
         }
@@ -31,14 +32,14 @@ public class User{
         }
     }
 
-    public static void arrayAddNote(){
-        userNotes.addNote();
+    public void arrayAddNote(){
+        notes.addNote();
     }
-    public static void arrayDateSearch(){
-        userNotes.dateSearcher(LocalDate.now());
+    public void arrayDateSearch(){
+        notes.findByDate(LocalDateTime.now());
     }
-
-    public static void arrayLastFour(){
-        userNotes.lastFourNotes();
+    public void arrayLastFour(){
+        int count =4;
+        notes.lastFourNotes(count);
     }
 }

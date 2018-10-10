@@ -1,19 +1,14 @@
 package Vihu;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 public class Note {
-    /**
-     * 1. нотатка:
-     * - текст;
-     * - дата;
-     * - враження;
-     **/
+
     final String note;
-    final LocalDate date;
+    final LocalDateTime date;
     final String feelings;
 
-    Note(String note, LocalDate date, String feelings) {
+    Note(String note, LocalDateTime date, String feelings) {
         this.note = note;
         this.date = date;
         this.feelings = feelings;
