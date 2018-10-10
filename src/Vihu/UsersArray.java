@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class UsersArray {
-    public static ArrayList<User> users = new ArrayList<>();
+    private static ArrayList<User> users = new ArrayList<>();
     private static Scanner scanner = new Scanner(System.in);
     private static long id = 0;
 
@@ -36,11 +36,8 @@ public class UsersArray {
         }
     }
 
-    public static void changeUser() {
-
-    }
-
     public static void loginUser() {
+        System.out.println("input login: ");
 
     }
 

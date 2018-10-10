@@ -4,24 +4,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-/**
- * 2. нотатки:
- * - масив нотаток;+
- * - пошук нотаток за датою;+
- * - останні нотатки(4);+
- **/
-public class ListNoteStorage implements NoteStorage {
-    @Override
-    public Note findById(long id) {
-        return null;
-    }
-
-    public void save(Note note) {
-    }
-
-    public void deleteById(long id) {
-    }
-
+public class NotesArray {
     public final ArrayList<Note> notes = new ArrayList<>();
     public Scanner sc = new Scanner(System.in);
 
@@ -35,7 +18,7 @@ public class ListNoteStorage implements NoteStorage {
         notes.add(note);
     }
 
-    public String dateSearcer(LocalDate date) {
+    public String dateSearcher(LocalDate date) {
         String tempString = "|" + date;
         int i = 1;
         for (Note note : notes) {
