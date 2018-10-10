@@ -4,11 +4,11 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class NotesArray {
-    public final ArrayList<Note> notes = new ArrayList<>();
-    public Scanner sc = new Scanner(System.in);
+class NotesArray {
+    private final ArrayList<Note> notes = new ArrayList<>();
+    private Scanner sc = new Scanner(System.in);
 
-    public void addNote() {
+    void addNote() {
         System.out.println("input your note: ");
         String tempNote = sc.nextLine();
         LocalDate tempDate = LocalDate.now();
@@ -18,7 +18,7 @@ public class NotesArray {
         notes.add(note);
     }
 
-    public String dateSearcher(LocalDate date) {
+    String dateSearcher(LocalDate date) {
         String tempString = "|" + date;
         int i = 1;
         for (Note note : notes) {
@@ -34,7 +34,7 @@ public class NotesArray {
         }
     }
 
-    public String lastFourNotes() {
+    String lastFourNotes() {
         int temp = notes.size();
         String tempStr = "";
         if (temp >= 4) {

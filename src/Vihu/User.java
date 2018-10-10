@@ -1,21 +1,23 @@
 package Vihu;
 
+import java.time.LocalDate;
 import java.util.Scanner;
 
 public class User{
-    public final long id;
-    public static String username;
-    public static String password;
+    final long id;
+    String username;
+    String password;
+    private static NotesArray userNotes = new NotesArray();
 
     private static final Scanner scanner = new Scanner(System.in);
 
-    public User(long id, String username, String password) {
+    User(long id, String username, String password) {
         this.id = id;
         this.username = username;
         this.password = password;
     }
 
-    public static void changeUser() {
+    public void changeUser() {
         System.out.println("What will you wanna change?? (username/password)");
         String tempStr = scanner.next();
         if (tempStr.equals("username")) {
@@ -27,5 +29,16 @@ public class User{
         } else {
             System.out.println("wrong info");
         }
+    }
+
+    public static void arrayAddNote(){
+        userNotes.addNote();
+    }
+    public static void arrayDateSearch(){
+        userNotes.dateSearcher(LocalDate.now());
+    }
+
+    public static void arrayLastFour(){
+        userNotes.lastFourNotes();
     }
 }

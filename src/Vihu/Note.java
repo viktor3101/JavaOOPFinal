@@ -9,11 +9,11 @@ public class Note {
      * - дата;
      * - враження;
      **/
-    public final String note;
-    public final LocalDate date;
-    public final String feelings;
+    final String note;
+    final LocalDate date;
+    final String feelings;
 
-    public Note(String note, LocalDate date, String feelings) {
+    Note(String note, LocalDate date, String feelings) {
         this.note = note;
         this.date = date;
         this.feelings = feelings;

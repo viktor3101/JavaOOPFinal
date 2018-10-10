@@ -6,7 +6,8 @@ import java.util.Scanner;
 public class UsersArray {
     private static ArrayList<User> users = new ArrayList<>();
     private static Scanner scanner = new Scanner(System.in);
-    private static long id = 0;
+    private static long id = 0l;
+    private static long currentUserId = 0l;
 
     public static void addUser() {
         System.out.print("Input username: ");
@@ -37,11 +38,20 @@ public class UsersArray {
     }
 
     public static void loginUser() {
-        System.out.println("input login: ");
-
+        while (currentUserId == 0l) {
+            System.out.println("input username: ");
+            String tempUN = scanner.next();
+            System.out.println("input password: ");
+            String tempPass = scanner.next();
+            for (User user : users) {
+                if (user.username.equals(tempUN) && user.password.equals(tempPass)) {
+                    currentUserId = user.id;
+                }
+            }
+        }
     }
 
     public static void logoutUser() {
-
+        currentUserId = 0l;
     }
 }
