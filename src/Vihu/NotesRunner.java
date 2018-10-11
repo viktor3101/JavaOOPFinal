@@ -12,25 +12,25 @@ public class NotesRunner {
 
 
         User user1 = users.loginUser();//Paul`s notes:)
-        user1.arrayAddNote("Today i had the best day ever:))","beautiful",LocalDateTime.now().minusMonths(1) );
-        user1.arrayAddNote("Feeling bad","sad",LocalDateTime.now().minusDays(5));
-        user1.arrayAddNote("No comments","very sad",LocalDateTime.now().minusDays(2));
-        user1.arrayAddNote("I am stupid","crazy",LocalDateTime.now().minusDays(1));
-        user1.arrayAddNote("i am married","the best",LocalDateTime.now());
+        user1.arrayAddNote("Today i had the best day ever:))", "beautiful", LocalDateTime.now().minusMonths(1));
+        user1.arrayAddNote("Feeling bad", "sad", LocalDateTime.now().minusDays(5));
+        user1.arrayAddNote("No comments", "very sad", LocalDateTime.now().minusDays(2));
+        user1.arrayAddNote("I am stupid", "crazy", LocalDateTime.now().minusDays(1));
+        user1.arrayAddNote("i am married", "the best", LocalDateTime.now());
         user1.changeUser();
         user1.changeUser();
         System.out.println(user1.listLastNotes());// must show only 4
         users.logoutUser();
 
         User user2 = users.loginUser();//Katy`s notes:)
-        user2.arrayAddNote("he will marry me","beautiful",LocalDateTime.now().minusMonths(1));
-        user2.arrayAddNote("he really wanna me be his wife","crazy",LocalDateTime.now().minusDays(7));
-        user2.arrayAddNote("i am married","the best",LocalDateTime.now());
+        user2.arrayAddNote("he will marry me", "beautiful", LocalDateTime.now().minusMonths(1));
+        user2.arrayAddNote("he really wanna me be his wife", "crazy", LocalDateTime.now().minusDays(7));
+        user2.arrayAddNote("i am married", "the best", LocalDateTime.now());
         System.out.println(user2.listLastNotes());// must show all
         user2.arrayDateSearch();
 
         User user3 = users.loginUser();//Bob`s notes:)
-        user3.arrayAddNote("feel HAPPY! my Katy is wife now","the happiest dad",LocalDateTime.now());
+        user3.arrayAddNote("feel HAPPY! my Katy is wife now", "the happiest dad", LocalDateTime.now());
         System.out.println("Your id is: " + user3.seeMyId());
 
 
@@ -44,7 +44,7 @@ public class NotesRunner {
         System.out.println(users.showUser());
     }
 }
-/**
+/*
  * Paul
  * input password:
  * pas1
@@ -67,7 +67,7 @@ public class NotesRunner {
  * | 2018-10-05T23:31:32.937344
  * | Feeling bad
  * | feelings: sad
- *
+ * <p>
  * input username:
  * Katy
  * input password:
@@ -82,7 +82,7 @@ public class NotesRunner {
  * | 2018-09-10T23:32:28.172892
  * | he will marry me
  * | feelings: beautiful
- *
+ * <p>
  * input username:
  * Bob
  * input password:
@@ -104,4 +104,4 @@ public class NotesRunner {
  * 123
  * your account will be deleted:)
  * [Paul1997, Katy, Bob]
- * **/
+ */
