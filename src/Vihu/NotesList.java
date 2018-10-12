@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-public class NotesList {
+public class NotesList implements NoteStorage{
     private final List<Note> notes = new ArrayList<>();
 
     public void addNote() {
@@ -20,8 +20,8 @@ public class NotesList {
         StringBuilder tempString = new StringBuilder("|" + date);
         int i = 1;
         for (Note note : notes) {
-            if (date == note.date) {
-                tempString.append("|").append(i).append("| ").append(note.note).append("\n|   ").append(note.feelings);
+            if (date.equals(note.getDate())) {
+                tempString.append("|").append(i).append("| ").append(note.getNote()).append("\n|   ").append(note.getFeelings());
                 i++;
             }
         }
@@ -45,5 +45,20 @@ public class NotesList {
             }
         }
         return tempStr;
+    }
+
+    @Override
+    public Note findById(long id) {
+        return null;
+    }
+
+    @Override
+    public void save(Note note) {
+
+    }
+
+    @Override
+    public void deleteById(long id) {
+
     }
 }

@@ -2,10 +2,10 @@ package Vihu;
 
 import java.util.Scanner;
 
-class UserConsoleReader {
+public class UserConsoleReader {
     private static Scanner scanner = new Scanner(System.in);
 
-    static User readUser(long id) {
+    public static User readUser(long id) {
         System.out.print("Input username: ");
         String tempUN = scanner.next();
         System.out.print("Input password: ");
@@ -13,22 +13,22 @@ class UserConsoleReader {
         return new User(id, tempUN, tempPass);
     }
 
-    static String username() {
+    public static String username() {
         System.out.println("input username: ");
         return scanner.next();
     }
 
-    static String password() {
+    public static String password() {
         System.out.println("input password: ");
         return scanner.next();
     }
 
-    static long userId(){
+    public static long userId(){
         System.out.print("Input id of user, you wanna delete: ");
         return scanner.nextLong();
     }
 
-    static String changeInfo() {
+    public static String changeInfo() {
         System.out.println("What will you wanna change?? (username/password)");
         return scanner.next();
     }

@@ -4,14 +4,26 @@ import java.time.LocalDateTime;
 
 public class Note {
 
-    final String note;
-    final LocalDateTime date;
-    final String feelings;
+    private final String note;
+    private final LocalDateTime date;
+    private final String feelings;
 
     public Note(String note, LocalDateTime date, String feelings) {
         this.note = note;
         this.date = date;
         this.feelings = feelings;
+    }
+
+    public String getNote() {
+        return note;
+    }
+
+    public LocalDateTime getDate() {
+        return date;
+    }
+
+    public String getFeelings() {
+        return feelings;
     }
 
     public String toString() {

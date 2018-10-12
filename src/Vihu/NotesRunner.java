@@ -31,16 +31,16 @@ public class NotesRunner {
 
         User user3 = users.loginUser();//Bob`s notes:)
         user3.arrayAddNote("feel HAPPY! my Katy is wife now", "the happiest dad", LocalDateTime.now());
-        System.out.println("Your id is: " + user3.seeMyId());
+        System.out.println("Your id is: " + user3.getId());
 
 
         users.addUser();//Add your own user:)
         User user4 = users.loginUser();
         user4.arrayAddNote();
-        System.out.println(user4.seeMyId());
+        System.out.println(user4.getId());
 
         System.out.println(users.showUser());
-        users.deleteUser(user4.seeMyId());//if you will pass the verification user 4 will be deleted
+        users.deleteUser(user4.getId());//if you will pass the verification user 4 will be deleted
         System.out.println(users.showUser());
     }
 }

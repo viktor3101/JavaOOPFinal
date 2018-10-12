@@ -3,100 +3,110 @@
   <ID>JAVA</ID>
   <OriginalElement>Vihu</OriginalElement>
   <nodes>
-    <node x="228.0" y="208.0">Vihu.NoteConsoleReader</node>
-    <node x="64.16185897435903" y="565.0">Vihu.User</node>
-    <node x="56.815705128205195" y="923.0">Vihu.UsersList</node>
-    <node x="242.91506410256417" y="357.5">Vihu.NotesList</node>
-    <node x="0.0" y="197.0">Vihu.NoteStorage</node>
-    <node x="201.66506410256412" y="0.0">Vihu.Note</node>
-    <node x="147.3157051282052" y="1188.0">Vihu.NotesRunner</node>
-    <node x="23.915064102564173" y="346.0">Vihu.UserConsoleReader</node>
+    <node x="149.0746031746032" y="230.0">Vihu.NoteConsoleReader</node>
+    <node x="30.96547619047621" y="979.0">Vihu.UsersList</node>
+    <node x="39.94999999999999" y="643.0">Vihu.User</node>
+    <node x="213.83730158730165" y="368.0">Vihu.NotesList</node>
+    <node x="376.21547619047624" y="219.0">Vihu.NoteStorage</node>
+    <node x="259.075" y="11.0">Vihu.Note</node>
+    <node x="98.43730158730156" y="1244.0">Vihu.NotesRunner</node>
+    <node x="0.0" y="0.0">Vihu.UserConsoleReader</node>
   </nodes>
   <notes />
   <edges>
     <edge source="Vihu.NotesList" target="Vihu.Note">
-      <point x="133.12499999999991" y="-73.0" />
-      <point x="553.5400641025641" y="316.0" />
-      <point x="437.5" y="316.0" />
-      <point x="437.5" y="172.0" />
-      <point x="479.4150641025641" y="172.0" />
-      <point x="126.25" y="73.5" />
+      <point x="-71.0" y="-107.5" />
+      <point x="320.3373015873017" y="343.0" />
+      <point x="354.71547619047624" y="343.0" />
+      <point x="354.71547619047624" y="189.0" />
+      <point x="385.325" y="189.0" />
+      <point x="-25.25" y="73.5" />
     </edge>
     <edge source="Vihu.UsersList" target="Vihu.UserConsoleReader">
-      <point x="-92.99999999999997" y="-107.5" />
-      <point x="87.81570512820522" y="898.0" />
-      <point x="53.66185897435906" y="898.0" />
-      <point x="53.66185897435906" y="540.0" />
-      <point x="48.79006410256417" y="540.0" />
-      <point x="-74.625" y="84.5" />
+      <point x="-93.0" y="-107.5" />
+      <point x="61.96547619047621" y="954.0" />
+      <point x="10.809126984126976" y="954.0" />
+      <point x="10.809126984126976" y="199.0" />
+      <point x="19.900000000000006" y="199.0" />
+      <point x="-79.6" y="84.5" />
     </edge>
     <edge source="Vihu.UsersList" target="Vihu.User">
-      <point x="93.00000000000003" y="-107.5" />
-      <point x="273.8157051282052" y="898.0" />
-      <point x="307.911858974359" y="898.0" />
-      <point x="48.75" y="154.0" />
-    </edge>
-    <edge source="Vihu.UserConsoleReader" target="Vihu.User">
-      <point x="74.625" y="84.5" />
-      <point x="198.04006410256417" y="540.0" />
-      <point x="259.161858974359" y="540.0" />
-      <point x="0.0" y="-154.0" />
-    </edge>
-    <edge source="Vihu.User" target="Vihu.UserConsoleReader">
-      <point x="-156.0" y="-154.0" />
-      <point x="103.16185897435903" y="540.0" />
-      <point x="98.54006410256417" y="540.0" />
-      <point x="-24.875" y="84.5" />
+      <point x="93.0" y="-107.5" />
+      <point x="247.9654761904762" y="954.0" />
+      <point x="283.7" y="954.0" />
+      <point x="48.75" y="143.0" />
     </edge>
     <edge source="Vihu.NoteConsoleReader" target="Vihu.Note">
-      <point x="-44.25" y="-38.5" />
-      <point x="272.25" y="172.0" />
-      <point x="277.4150641025641" y="172.0" />
-      <point x="-75.75" y="73.5" />
+      <point x="-2.8421709430404007E-14" y="-38.5" />
+      <point x="237.57460317460317" y="199.0" />
+      <point x="284.325" y="199.0" />
+      <point x="-126.25" y="73.5" />
     </edge>
     <edge source="Vihu.NotesList" target="Vihu.NoteConsoleReader">
-      <point x="-133.12500000000006" y="-73.0" />
-      <point x="287.2900641025641" y="326.0" />
-      <point x="316.5" y="326.0" />
+      <point x="-142.0" y="-107.5" />
+      <point x="249.33730158730165" y="343.0" />
+      <point x="237.5746031746032" y="343.0" />
       <point x="0.0" y="38.5" />
     </edge>
-    <edge source="Vihu.NotesRunner" target="Vihu.UsersList">
-      <point x="-63.66666666666666" y="-26.5" />
-      <point x="179.1490384615385" y="1163.0" />
-      <point x="118.8157051282052" y="1163.0" />
-      <point x="-62.0" y="107.5" />
+    <edge source="Vihu.NotesList" target="Vihu.NoteStorage">
+      <point x="71.0" y="-107.5" />
+      <point x="462.3373015873017" y="343.0" />
+      <point x="480.21547619047624" y="343.0" />
+      <point x="0.0" y="49.5" />
     </edge>
     <edge source="Vihu.NoteStorage" target="Vihu.Note">
       <point x="0.0" y="-49.5" />
-      <point x="104.0" y="172.0" />
-      <point x="226.91506410256412" y="172.0" />
-      <point x="-126.25" y="73.5" />
+      <point x="480.21547619047624" y="199.0" />
+      <point x="486.32500000000005" y="199.0" />
+      <point x="75.75" y="73.5" />
+    </edge>
+    <edge source="Vihu.User" target="Vihu.NotesList">
+      <point x="78.0" y="-143.0" />
+      <point x="312.95" y="623.0" />
+      <point x="302.5873015873017" y="623.0" />
+      <point x="-88.75" y="107.5" />
+    </edge>
+    <edge source="Vihu.NoteConsoleReader" target="Vihu.UserConsoleReader">
+      <point x="-59.00000000000003" y="-38.5" />
+      <point x="79.60000000000002" y="84.5" />
+    </edge>
+    <edge source="Vihu.UserConsoleReader" target="Vihu.User">
+      <point x="39.80000000000001" y="84.5" />
+      <point x="138.5746031746032" y="603.0" />
+      <point x="234.95" y="603.0" />
+      <point x="0.0" y="-143.0" />
+    </edge>
+    <edge source="Vihu.User" target="Vihu.UserConsoleReader">
+      <point x="-156.0" y="-143.0" />
+      <point x="78.94999999999999" y="623.0" />
+      <point x="62.712301587301624" y="623.0" />
+      <point x="62.712301587301624" y="199.0" />
+      <point x="59.70000000000002" y="199.0" />
+      <point x="-39.79999999999998" y="84.5" />
+    </edge>
+    <edge source="Vihu.NotesRunner" target="Vihu.UsersList">
+      <point x="-63.66666666666666" y="-26.5" />
+      <point x="130.2706349206349" y="1219.0" />
+      <point x="92.96547619047621" y="1219.0" />
+      <point x="-62.0" y="107.5" />
     </edge>
     <edge source="Vihu.NotesRunner" target="Vihu.User">
       <point x="63.666666666666686" y="-26.5" />
-      <point x="306.4823717948719" y="1163.0" />
-      <point x="315.3157051282052" y="1163.0" />
-      <point x="315.3157051282052" y="898.0" />
-      <point x="405.411858974359" y="898.0" />
-      <point x="146.25" y="154.0" />
-    </edge>
-    <edge source="Vihu.User" target="Vihu.NotesList">
-      <point x="156.0" y="-154.0" />
-      <point x="415.161858974359" y="540.0" />
-      <point x="509.1650641025642" y="540.0" />
-      <point x="88.75" y="73.0" />
+      <point x="257.6039682539682" y="1219.0" />
+      <point x="289.46547619047624" y="1219.0" />
+      <point x="289.46547619047624" y="954.0" />
+      <point x="381.2" y="954.0" />
+      <point x="146.25" y="143.0" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="1.0" x="299.0" y="613.0" />
-  <SelectedNodes>
-    <node>Vihu.NotesRunner</node>
-  </SelectedNodes>
+  <settings layout="Hierarchic Group" zoom="1.0710547184773989" x="299.0" y="257.2967569968903" />
+  <SelectedNodes />
   <Categories>
     <Category>Fields</Category>
+    <Category>Constructors</Category>
     <Category>Methods</Category>
     <Category>Properties</Category>
     <Category>Inner Classes</Category>
-    <Category>Constructors</Category>
   </Categories>
   <SCOPE>All</SCOPE>
   <VISIBILITY>private</VISIBILITY>

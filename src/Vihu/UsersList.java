@@ -22,19 +22,19 @@ public class UsersList {
 
     public void deleteUser(long tempId) {
         User tempUser = null;
-        while (tempUser == null) {
+        while (tempUser.equals( null)) {
             for (User user : users) {
-                if (user.id == tempId) {
+                if (tempId == user.getId()) {
                     tempUser = user;
                     break;
                 }
             }
-            if (tempUser == null) {
+            if (tempUser.equals(null)) {
                 tempId = userId();
             }
         }
         String pass = password();
-        if (pass.equals(tempUser.password)) {
+        if (pass.equals(tempUser.getPassword())) {
             System.out.println("your account will be deleted:)");
             users.remove(tempUser);
         }
@@ -42,11 +42,11 @@ public class UsersList {
 
     public User loginUser() {
         User tempUser = null;
-        while (tempUser == null) {
+        while (tempUser.equals( null)) {
             String tempUN = username();
             String tempPass = password();
             for (User user : users) {
-                if (user.username.equals(tempUN) && user.password.equals(tempPass)) {
+                if (user.getUsername().equals(tempUN) && user.getPassword().equals(tempPass)) {
                     tempUser = user;
                 }
             }
@@ -58,7 +58,7 @@ public class UsersList {
         String[] usersArray = new String[users.size()];
         int i = 0;
         for (User user : users) {
-            usersArray[i]=user.username;
+            usersArray[i]=user.getUsername();
             i++;
         }
         return Arrays.toString(usersArray);

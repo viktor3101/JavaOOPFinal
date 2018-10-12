@@ -6,10 +6,29 @@ import java.util.Scanner;
 import static Vihu.UserConsoleReader.*;
 
 public class User {
-    final long id;
-    String username;
-    String password;
+    private final long id;
+    private String username;
+    private String password;
     private final NotesList notes = new NotesList();
+
+    public String getUsername() {
+        return username;
+    }
+
+    public long getId(){
+        return id;
+    }
+    public String getPassword() {
+        return password;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
     private static final Scanner scanner = new Scanner(System.in);
 
@@ -26,14 +45,8 @@ public class User {
         } else {
             if (tempStr.equals("password")) {
                 this.password = scanner.next();
-            } else {
-                System.out.println("wrong info");
             }
         }
-    }
-
-    public long seeMyId() {
-        return id;
     }
 
     public void arrayAddNote() {
