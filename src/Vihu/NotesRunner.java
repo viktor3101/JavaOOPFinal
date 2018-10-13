@@ -10,28 +10,17 @@ public class NotesRunner {
         users.addUser("Katy", "pas2");
         users.addUser("Bob", "pas3");
 
+        users.getUser("Paul").arrayAddNote("Today i had the best day ever:))", "beautiful", LocalDateTime.now().minusMonths(1));
+        users.getUser("Paul").arrayAddNote("Feeling bad", "sad", LocalDateTime.now().minusDays(5));
+        users.getUser("Paul").arrayAddNote("No comments", "very sad", LocalDateTime.now().minusDays(2));
+        users.getUser("Paul").arrayAddNote("I am stupid", "crazy", LocalDateTime.now().minusDays(1));
+        users.getUser("Paul").arrayAddNote("i am married", "the best", LocalDateTime.now());
 
-        User user1 = users.loginUser();//Paul`s notes:)
-        user1.arrayAddNote("Today i had the best day ever:))", "beautiful", LocalDateTime.now().minusMonths(1));
-        user1.arrayAddNote("Feeling bad", "sad", LocalDateTime.now().minusDays(5));
-        user1.arrayAddNote("No comments", "very sad", LocalDateTime.now().minusDays(2));
-        user1.arrayAddNote("I am stupid", "crazy", LocalDateTime.now().minusDays(1));
-        user1.arrayAddNote("i am married", "the best", LocalDateTime.now());
-        user1.changeUser();
-        user1.changeUser();
-        System.out.println(user1.listLastNotes());// must show only 4
-        users.logoutUser();
+        users.getUser("Katy").arrayAddNote("he will marry me", "beautiful", LocalDateTime.now().minusMonths(1));
+        users.getUser("Katy").arrayAddNote("he really wanna me be his wife", "crazy", LocalDateTime.now().minusDays(7));
+        users.getUser("Katy").arrayAddNote("i am married", "the best", LocalDateTime.now());
 
-        User user2 = users.loginUser();//Katy`s notes:)
-        user2.arrayAddNote("he will marry me", "beautiful", LocalDateTime.now().minusMonths(1));
-        user2.arrayAddNote("he really wanna me be his wife", "crazy", LocalDateTime.now().minusDays(7));
-        user2.arrayAddNote("i am married", "the best", LocalDateTime.now());
-        System.out.println(user2.listLastNotes());// must show all
-        user2.arrayDateSearch();
-
-        User user3 = users.loginUser();//Bob`s notes:)
-        user3.arrayAddNote("feel HAPPY! my Katy is wife now", "the happiest dad", LocalDateTime.now());
-        System.out.println("Your id is: " + user3.getId());
+        users.getUser("Bob").arrayAddNote("feel HAPPY! my Katy is wife now", "the happiest dad", LocalDateTime.now());
 
 
         users.addUser();//Add your own user:)
