@@ -6,30 +6,30 @@ import java.time.LocalDateTime;
 public class NotesRunner {
     public static void main(String[] args) {
         UsersList users = new UsersList();
-        users.addUser("Paul", "pas1");
-        users.addUser("Katy", "pas2");
-        users.addUser("Bob", "pas3");
+        users.addUser("Paul", "pas1");//id 1
+        users.addUser("Katy", "pas2");//id 2
+        users.addUser("Bob", "pas3");//id 3
 
-        users.getUser("Paul").arrayAddNote("Today i had the best day ever:))", "beautiful", LocalDateTime.now().minusMonths(1));
-        users.getUser("Paul").arrayAddNote("Feeling bad", "sad", LocalDateTime.now().minusDays(5));
-        users.getUser("Paul").arrayAddNote("No comments", "very sad", LocalDateTime.now().minusDays(2));
-        users.getUser("Paul").arrayAddNote("I am stupid", "crazy", LocalDateTime.now().minusDays(1));
-        users.getUser("Paul").arrayAddNote("i am married", "the best", LocalDateTime.now());
+        users.getUser("Paul").addNote("Today i had the best day ever:))", "beautiful", LocalDateTime.now().minusMonths(1));
+        users.getUser("Paul").addNote("Feeling bad", "sad", LocalDateTime.now().minusDays(5));
+        users.getUser("Paul").addNote("No comments", "very sad", LocalDateTime.now().minusDays(2));
+        users.getUser("Paul").addNote("I am stupid", "crazy", LocalDateTime.now().minusDays(1));
+        users.getUser("Paul").addNote("i am married", "the best", LocalDateTime.now());
 
-        users.getUser("Katy").arrayAddNote("he will marry me", "beautiful", LocalDateTime.now().minusMonths(1));
-        users.getUser("Katy").arrayAddNote("he really wanna me be his wife", "crazy", LocalDateTime.now().minusDays(7));
-        users.getUser("Katy").arrayAddNote("i am married", "the best", LocalDateTime.now());
+        users.getUser("Katy").addNote("he will marry me", "beautiful", LocalDateTime.now().minusMonths(1));
+        users.getUser("Katy").addNote("he really wanna me be his wife", "crazy", LocalDateTime.now().minusDays(7));
+        users.getUser("Katy").addNote("i am married", "the best", LocalDateTime.now());
 
-        users.getUser("Bob").arrayAddNote("feel HAPPY! my Katy is wife now", "the happiest dad", LocalDateTime.now());
+        users.getUser("Bob").addNote("feel HAPPY! my Katy is wife now", "the happiest dad", LocalDateTime.now());
 
 
         users.addUser();//Add your own user:)
         User user4 = users.loginUser();
-        user4.arrayAddNote();
+        user4.addNote();
         System.out.println(user4.getId());
 
         System.out.println(users.showUser());
-        users.deleteUser(user4.getId());//if you will pass the verification user 4 will be deleted
+        users.deleteUser();//if you will pass the verification user will be deleted
         System.out.println(users.showUser());
     }
 }

@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-public class NotesList implements NoteStorage{
+public class NotesList{
     private final List<Note> notes = new ArrayList<>();
 
     public void addNote() {
@@ -45,20 +45,5 @@ public class NotesList implements NoteStorage{
             }
         }
         return tempStr;
-    }
-
-    @Override
-    public Note findById(long id) {
-        return null;
-    }
-
-    @Override
-    public void save(Note note) {
-
-    }
-
-    @Override
-    public void deleteById(long id) {
-
     }
 }

@@ -2,6 +2,6 @@ package Vihu;
 
 public interface NoteStorage {
     Note findById(long id);
-    void save(Note note);
+    void AddNote(Note note, Long id);
     void deleteById(long id);
 }

@@ -49,11 +49,11 @@ public class User {
         }
     }
 
-    public void arrayAddNote() {
+    public void addNote() {
         notes.addNote();
     }
 
-    public void arrayAddNote(String note, String feelings, LocalDateTime dateTime) {
+    public void addNote(String note, String feelings, LocalDateTime dateTime) {
         notes.addNote(note, feelings, dateTime);
     }
 
