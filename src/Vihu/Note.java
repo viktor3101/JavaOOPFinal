@@ -3,30 +3,26 @@ package Vihu;
 import java.time.LocalDateTime;
 
 public class Note {
-
 	private final String note;
-	private final LocalDateTime date;
-	private final String feelings;
+	private final LocalDateTime dateTime;
+	private final Feeling feeling;
 
-	public Note(String note, LocalDateTime date, String feelings) {
+	public Note(String note, LocalDateTime dateTime, Feeling feeling) {
 		this.note = note;
-		this.date = date;
-		this.feelings = feelings;
+		this.dateTime = dateTime;
+		this.feeling = feeling;
 	}
 
-	public String getNote() {
-		return note;
+	public LocalDateTime getDate(){
+		return dateTime;
 	}
 
-	public LocalDateTime getDate() {
-		return date;
-	}
-
-	public String getFeelings() {
-		return feelings;
-	}
-
-	public String toString(Long id) {
-		return id + ", " + note + ", " + feelings + ", " + date;
+	@Override
+	public String toString() {
+		return "Note{" +
+				"note='" + note + '\'' +
+				", dateTime=" + dateTime +
+				", feeling=" + feeling +
+				'}';
 	}
 }

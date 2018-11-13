@@ -1,68 +1,55 @@
 package Vihu;
 
 import java.time.LocalDateTime;
-import java.util.Scanner;
-
-import static Vihu.UserConsoleReader.*;
+import java.util.List;
 
 public class User {
-    private final long id;
-    private String username;
-    private String password;
-    private final NotesList notes = new NotesList();
+	private String username;
+	private String password;
+	private final long id;
+	private final NoteList noteList = new NoteList();
 
-    public String getUsername() {
-        return username;
-    }
+	public User(String username, String password, long id) {
+		this.username = username;
+		this.password = password;
+		this.id = id;
+	}
 
-    public long getId(){
-        return id;
-    }
-    public String getPassword() {
-        return password;
-    }
+	public void addNote(Note note) {
+		noteList.addNote(note);
+	}
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
+	public String getUname() {
+		return username;
+	}
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
+	public String getPass() {
+		return password;
+	}
 
-    private static final Scanner scanner = new Scanner(System.in);
+	public long getId(){
+		return id;
+	}
 
-    public User(long id, String username, String password) {
-        this.id = id;
-        this.username = username;
-        this.password = password;
-    }
+	public void changePass(String pass){
+		UserIO.pasChange(username);
+		if(pass==password){
+			password = UserIO.pas();
+		}
+	}
 
-    public void changeUser() {
-        String tempStr = changeInfo();
-        if (tempStr.equals("username")) {
-            this.username = scanner.next();
-        } else {
-            if (tempStr.equals("password")) {
-                this.password = scanner.next();
-            }
-        }
-    }
+	public void changeUname(String uname){
+		UserIO.unChange(username);
+		if (uname==username){
+			username = UserIO.un();
+		}
+	}
 
-    public void addNote() {
-        notes.addNote();
-    }
+	public void deleteByDate(LocalDateTime date) {
+		noteList.deleteByDate(date);
+	}
 
-    public void addNote(String note, String feelings, LocalDateTime dateTime) {
-        notes.addNote(note, feelings, dateTime);
-    }
-
-    public void arrayDateSearch() {
-        notes.findByDate(LocalDateTime.now());
-    }
-
-    public String listLastNotes() {
-        int count = 4;
-        return notes.lastFourNotes(count);
-    }
+	public List showLastNotes() {
+		return noteList.showLastNotes();
+	}
 }
