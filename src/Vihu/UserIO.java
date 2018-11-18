@@ -2,28 +2,28 @@ package Vihu;
 
 import java.util.Scanner;
 
-class UserIO {
+public class UserIO {
 	private static Scanner sc = new Scanner(System.in);
 
-	static String pas() {
+	public static String pas() {
 		System.out.print("Input your password: ");
 		return sc.next();
 	}
 
-	static void pasChange(String s) {
+	public static void pasChange(String s) {
 		System.out.print(s + ", you are changing your password\n");
 	}
 
-	static void unChange(String s) {
+	public static void unChange(String s) {
 		System.out.print(s + ", you are changing your username\n");
 	}
 
-	static String un() {
+	public static String un() {
 		System.out.print("Input your username: ");
 		return sc.next();
 	}
 
-	static void loginStart() {
+	public static void loginStart() {
 		System.out.println("*--LOGINING!--*");
 
 	}
@@ -32,16 +32,16 @@ class UserIO {
 		System.out.println("Invalid value");
 	}
 
-	static void invalidPath(){
+	public static void invalidPath(){
 		System.out.println("invalid file path");
 	}
 
-	static String askSorting() {
+	public static String askSorting() {
 		System.out.println("Newest first?");
 		return sc.next();
 	}
 
-	static int askFiltering() {
+	public static int askFiltering() {
 		System.out.println("What feeling will you wanna filter by?" +
 				"\n1 == GOOD" +
 				"\n2 == PERFECT" +
@@ -57,8 +57,24 @@ class UserIO {
 		return temp;
 	}
 
-	static Feeling feelingsFilter(){
-		int temp = UserIO.askFiltering();
+	private static int feelingAskingForAddingNewNote(){
+		System.out.println("How do you feel now?" +
+				"\n1 == GOOD" +
+				"\n2 == PERFECT" +
+				"\n3 == THE_BEST" +
+				"\n4 == SOSO" +
+				"\n5 == CRAZY"
+		);
+		int temp = sc.nextInt();
+		if (temp > 5 || temp < 1) {
+			invalidValue();
+			temp = 0;
+		}
+		return temp;
+	}
+
+	public static Feeling feelingsFilter(){
+		int temp = UserIO.feelingAskingForAddingNewNote();
 		switch(temp){
 			case 1: return Feeling.GOOD;
 			case 2: return Feeling.PERFECT;
@@ -69,15 +85,15 @@ class UserIO {
 		}
 	}
 
-	static void logining(User user) {
+	public static void logining(User user) {
 		System.out.println("You are now logged in as " + user.getUname() + ". Have fun! :)");
 	}
 
-	static void logingOut(User user) {
+	public static void logingOut(User user) {
 		System.out.println("You have logged out " + user.getUname() + ". Have fun, bye! :)");
 	}
 
-	static void deleting(User user) {
+	public static void deleting(User user) {
 		System.out.println("Account " + user.getUname() + " will be deleted.");
 	}
 }

@@ -1,8 +1,6 @@
 package Vihu;
 
-import java.io.IOError;
-import java.io.IOException;
-import java.io.Serializable;
+import java.io.*;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -22,14 +20,22 @@ public class User implements Serializable {
 		noteList.addNote(note);
 	}
 
-	public void addNoteFromFile(String filePath) {
+	public void addNoteFromFile(String filePath) throws FileNotFoundException {
 		try {
-
-
-			noteList.addNote(new Note("asfa", LocalDateTime.now(), UserIO.feelingsFilter()));
+			BufferedReader in = new BufferedReader(new FileReader(filePath));
+			String tempStr = in.readLine();
+			noteList.addNote(new Note(tempStr, LocalDateTime.now(), UserIO.feelingsFilter()));
+			in.close();
 		} catch (IOError error) {
 			UserIO.invalidPath();
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
+
+	}
+
+	public void writeNotesInFile(){
+		noteList.writeNotesInFile(username);
 	}
 
 	public String getUname() {

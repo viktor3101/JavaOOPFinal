@@ -22,6 +22,7 @@ public class Note implements Serializable {
 		return feeling;
 	}
 
+	public String getNote(){return note;}
 	@Override
 	public String toString() {
 		return "Note{" +

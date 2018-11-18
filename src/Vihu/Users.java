@@ -21,6 +21,7 @@ public class Users implements Serializable {
 			}
 
 		}
+		assert tempUser != null;
 		if (tempUser.getPass().equals(user.getPass())) {
 			UserIO.deleting(users.get(temp));
 			users.remove(temp);
