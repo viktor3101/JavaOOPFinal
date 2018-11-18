@@ -1,8 +1,9 @@
 package Vihu;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
-public class Note {
+public class Note implements Serializable {
 	private final String note;
 	private final LocalDateTime dateTime;
 	private final Feeling feeling;
@@ -15,6 +16,10 @@ public class Note {
 
 	public LocalDateTime getDate(){
 		return dateTime;
+	}
+
+	public Feeling getFeeling(){
+		return feeling;
 	}
 
 	@Override

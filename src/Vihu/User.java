@@ -1,9 +1,10 @@
 package Vihu;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.List;
 
-public class User {
+public class User implements Serializable {
 	private String username;
 	private String password;
 	private final long id;
@@ -27,20 +28,20 @@ public class User {
 		return password;
 	}
 
-	public long getId(){
+	public long getId() {
 		return id;
 	}
 
-	public void changePass(String pass){
+	public void changePass(String pass) {
 		UserIO.pasChange(username);
-		if(pass==password){
+		if (pass.equals(password)) {
 			password = UserIO.pas();
 		}
 	}
 
-	public void changeUname(String uname){
+	public void changeUname(String uname) {
 		UserIO.unChange(username);
-		if (uname==username){
+		if (uname.equals(username)) {
 			username = UserIO.un();
 		}
 	}
@@ -49,6 +50,13 @@ public class User {
 		noteList.deleteByDate(date);
 	}
 
+	public List sortingNotesByDate(){
+		return noteList.sortNotesByDate();
+	}
+
+	public List filteringNotesByFeelings(){
+		return noteList.filterNotesByFeelings();
+	}
 	public List showLastNotes() {
 		return noteList.showLastNotes();
 	}

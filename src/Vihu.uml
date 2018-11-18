@@ -3,23 +3,22 @@
   <ID>JAVA</ID>
   <OriginalElement>Vihu</OriginalElement>
   <nodes>
-    <node x="342.0" y="0.0">Vihu.User</node>
-    <node x="0.0" y="669.0">Vihu.Feeling</node>
-    <node x="149.0" y="669.0">Vihu.Runner</node>
-    <node x="30.5" y="0.0">Vihu.NoteStorage</node>
-    <node x="0.0" y="149.0">Vihu.NoteList</node>
-    <node x="521.0" y="386.0">Vihu.Note</node>
-    <node x="0.0" y="386.0">Vihu.UserIO</node>
-    <node x="265.0" y="386.0">Vihu.Users</node>
+    <node x="319.0" y="0.0">Vihu.User</node>
+    <node x="23.5" y="0.0">Vihu.NoteStorage</node>
+    <node x="0.0" y="859.0">Vihu.Runner</node>
+    <node x="498.0" y="494.0">Vihu.Note</node>
+    <node x="0.0" y="153.0">Vihu.NoteList</node>
+    <node x="0.0" y="494.0">Vihu.UserIO</node>
+    <node x="254.0" y="494.0">Vihu.Users</node>
   </nodes>
   <notes />
   <edges>
     <edge source="Vihu.NoteList" target="Vihu.NoteStorage">
-      <point x="0.0" y="-96.0" />
-      <point x="0.0" y="49.5" />
+      <point x="0.0" y="-148.0" />
+      <point x="0.0" y="51.5" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="0.9163934426229507" x="326.0" y="187.88014311270126" />
+  <settings layout="Hierarchic Group" zoom="0.6" x="343.42991533396093" y="445.83333333333337" />
   <SelectedNodes />
   <Categories>
     <Category>Fields</Category>

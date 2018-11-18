@@ -1,9 +1,10 @@
 package Vihu;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Users {
+public class Users implements Serializable {
 	private final List<User> users = new ArrayList<User>();
 
 	public void register(User user) {

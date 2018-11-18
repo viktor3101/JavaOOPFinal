@@ -7,3 +7,4 @@ public enum Feeling {
 	SOSO,
 	CRAZY
 }
+
