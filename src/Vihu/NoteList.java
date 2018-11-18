@@ -8,11 +8,11 @@ import java.util.List;
 public class NoteList implements NoteStorage, Serializable {
 	private final List<Note> notes = new ArrayList<Note>();
 
-	public void addNote(Note note) {
+	void addNote(Note note) {
 		notes.add(note);
 	}
 
-	public void deleteByDate(LocalDateTime dateTime) {
+	void deleteByDate(LocalDateTime dateTime) {
 		int temp = 0;
 		for (int i = 0; i < notes.size(); i++) {
 			if (notes.get(i).getDate().equals(dateTime)) {
@@ -22,7 +22,7 @@ public class NoteList implements NoteStorage, Serializable {
 		notes.remove(temp);
 	}
 
-	public List showLastNotes() {
+	List showLastNotes() {
 		List<Note> s = new ArrayList<>();
 		if (notes.size() <= 4) {
 			s.addAll(notes);
@@ -34,7 +34,7 @@ public class NoteList implements NoteStorage, Serializable {
 		return s;
 	}
 
-	public List sortNotesByDate() {
+	List sortNotesByDate() {
 		List sortedNotes = new ArrayList<>();
 		String tempStr = UserIO.askSorting();
 		if (tempStr.equals("yes")) {
@@ -55,7 +55,7 @@ public class NoteList implements NoteStorage, Serializable {
 		return templist;
 	}
 
-	public List filterNotesByFeelings(){
+	List filterNotesByFeelings(){
 		int temp = UserIO.askFiltering();
 		switch(temp){
 			case 1:return sortForFiltering(Feeling.GOOD);
@@ -68,7 +68,7 @@ public class NoteList implements NoteStorage, Serializable {
 		}
 	}
 
-	List sortForFiltering(Feeling feel){
+	private List sortForFiltering(Feeling feel){
 		List<Note> tempList = new ArrayList<>();
 		for (Note note:notes) {
 			if (note.getFeeling().equals(feel)){

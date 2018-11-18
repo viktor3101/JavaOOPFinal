@@ -5,6 +5,7 @@ public enum Feeling {
 	PERFECT,
 	THE_BEST,
 	SOSO,
-	CRAZY
+	CRAZY,
+	NO_FEELING
 }
 

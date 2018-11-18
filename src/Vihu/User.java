@@ -1,5 +1,7 @@
 package Vihu;
 
+import java.io.IOError;
+import java.io.IOException;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.List;
@@ -18,6 +20,16 @@ public class User implements Serializable {
 
 	public void addNote(Note note) {
 		noteList.addNote(note);
+	}
+
+	public void addNoteFromFile(String filePath) {
+		try {
+
+
+			noteList.addNote(new Note("asfa", LocalDateTime.now(), UserIO.feelingsFilter()));
+		} catch (IOError error) {
+			UserIO.invalidPath();
+		}
 	}
 
 	public String getUname() {
@@ -50,13 +62,14 @@ public class User implements Serializable {
 		noteList.deleteByDate(date);
 	}
 
-	public List sortingNotesByDate(){
+	public List sortingNotesByDate() {
 		return noteList.sortNotesByDate();
 	}
 
-	public List filteringNotesByFeelings(){
+	public List filteringNotesByFeelings() {
 		return noteList.filterNotesByFeelings();
 	}
+
 	public List showLastNotes() {
 		return noteList.showLastNotes();
 	}

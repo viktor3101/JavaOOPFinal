@@ -37,10 +37,19 @@ public class Users implements Serializable {
 		return users.get(i);
 	}
 
+	public int size() {
+		return users.size();
+	}
+
+	public User get(int i) {
+
+		return users.get(i);
+	}
+
 	public User logIn() {
 		UserIO.loginStart();
 		User user = null;
-		while (user==null) {
+		while (user == null) {
 			String tempUn = UserIO.un();
 			String tempPas = UserIO.pas();
 			int temp = 0;

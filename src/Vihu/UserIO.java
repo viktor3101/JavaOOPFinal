@@ -3,7 +3,7 @@ package Vihu;
 import java.util.Scanner;
 
 class UserIO {
-	static Scanner sc = new Scanner(System.in);
+	private static Scanner sc = new Scanner(System.in);
 
 	static String pas() {
 		System.out.print("Input your password: ");
@@ -28,8 +28,12 @@ class UserIO {
 
 	}
 
-	public static void invalidValue() {
+	private static void invalidValue() {
 		System.out.println("Invalid value");
+	}
+
+	static void invalidPath(){
+		System.out.println("invalid file path");
 	}
 
 	static String askSorting() {
@@ -51,6 +55,18 @@ class UserIO {
 			temp = 0;
 		}
 		return temp;
+	}
+
+	static Feeling feelingsFilter(){
+		int temp = UserIO.askFiltering();
+		switch(temp){
+			case 1: return Feeling.GOOD;
+			case 2: return Feeling.PERFECT;
+			case 3: return Feeling.THE_BEST;
+			case 4: return Feeling.SOSO;
+			case 5: return Feeling.SOSO;
+			default: return Feeling.NO_FEELING;
+		}
 	}
 
 	static void logining(User user) {
