@@ -46,10 +46,10 @@ public class TestRunnerOut {
 			for (int i=0;i<length;i++){
 				users.register((User)in.readObject());
 			}
+			in.close();
 		} catch (IOException | ClassNotFoundException ex) {
 			System.out.println("Viktor Invalid");
 			ex.printStackTrace();
 		}
-        in.close();
 	}
 }
