@@ -39,23 +39,5 @@ public class TestRunnerOut {
 		} catch (IOException ex) {
 			ex.printStackTrace();
 		}
-
-		/*users = new Users();
-
-		ObjectInputStream in = null;
-		try {
-			in = new ObjectInputStream(new FileInputStream("users.txt"));
-			int length = in.readInt();
-			for (int i=0;i<length;i++){
-				users.register((User)in.readObject());
-			}
-		} catch (IOException | ClassNotFoundException ex) {
-			System.out.println("Viktor Invalid");
-			ex.printStackTrace();
-		}
-		in.close();
-
-
-*/
 	}
 }
