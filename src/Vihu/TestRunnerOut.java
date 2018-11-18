@@ -26,34 +26,30 @@ public class TestRunnerOut {
 		//ObjectOutputStream out = null;
 
 		try {
-			ObjectOutputStream out = new ObjectOutputStream(new BufferedOutputStream(
-					new FileOutputStream("users.txt")));
-
+			ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("users.txt"));
 			int length = users.size();
-			out.writeObject(length);
-			for (int i=0;i<users.size();i++){
+			out.writeInt(length);
+			for (int i = 0; i < users.size(); i++) {
 				out.writeObject(users.get(i));
 			}
+			out.close();
 		} catch (IOException ex) {
 			ex.printStackTrace();
 		}
 
-		users = null;
+		users = new Users();
 
 		ObjectInputStream in = null;
 		try {
-			in = new ObjectInputStream(new BufferedInputStream(
-					new FileInputStream("users.txt")));
+			in = new ObjectInputStream(new FileInputStream("users.txt"));
 			int length = in.readInt();
 			for (int i=0;i<length;i++){
 				users.register((User)in.readObject());
 			}
-
-			users = (Users) in.readObject();
 		} catch (IOException | ClassNotFoundException ex) {
 			System.out.println("Viktor Invalid");
 			ex.printStackTrace();
 		}
-
+        in.close();
 	}
 }
